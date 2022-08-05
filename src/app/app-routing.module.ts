@@ -15,6 +15,18 @@ const routes: Routes = [
     path: 'listing',
     loadChildren: () => import('./listing/listing.module').then( m => m.ListingPageModule)
   },
+  {
+    path: 'cart',
+    loadChildren: () => import('./cart/cart.module').then( m => m.CartPageModule)
+  },
+  {
+    path: 'components',
+    loadChildren: () => import('./components/components.module').then( m => m.ComponentsPageModule)
+  },
+  {
+    path: 'explore-container',
+    loadChildren: () => import('./explore-container/explore-container.module').then( m => m.ExploreContainerPageModule)
+  },
 
 ];
 
