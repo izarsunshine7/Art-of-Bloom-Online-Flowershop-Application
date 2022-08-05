@@ -16,4 +16,4 @@ import { ListingPageRoutingModule } from './listing-routing.module';
   ],
   declarations: [ListingPage]
 })
-export class HomePageModule {}
+export class ListingPageModule {}
