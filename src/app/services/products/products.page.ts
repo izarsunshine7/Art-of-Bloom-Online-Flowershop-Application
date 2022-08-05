@@ -5,7 +5,7 @@ import { UtilityPage } from '../utility/utility.page';
 @Injectable({
   providedIn: 'root'
 })
-export class FlowersPage {
+export class ProductsPage {
   
   brands: any = [];
   sizes: any = [];
@@ -46,44 +46,42 @@ export class FlowersPage {
 
   bannerImages = [
     {
-      imgurl: 'assets/daisy.jpg'
+      imgurl: 'assets/images/image1.jpg'
     }, {
-      imgurl: 'assets/tulip.jpg'
+      imgurl: 'assets/images/image2.jpg'
     }, {
-      imgurl: 'assets/whiterose.jpg'
-    }, {
-      imgurl: 'assets/sunflower.jpg'
+      imgurl: 'assets/images/image3.jpg'
     }
   ];
 
-  flowers = [
+  products = [
     {
       id : 1,
-      imgurl: 'assets/daisy.jpg',
+      imgurl: 'assets/images/image1.jpg',
       name: 'Beautiful You',
       category: 'daisy',
-      price: 1299,
+      price: 23.43,
       totalStock: 10
     }, {
       id : 2,
-      imgurl: 'assets/tulip.jpg',
-      name: 'Queen Thalia',
-      category: 'tulip',
-      price: 3299,
+      imgurl: 'assets/images/image3.jpg',
+      name: 'Sunny Smile',
+      category: 'sunflower',
+      price: 27.04,
       totalStock: 10
     }, {
       id : 3,
-      imgurl: 'assets/whiterose.jpg',
-      name: 'Pure Love',
-      category: 'whiterose',
-      price: 1599,
+      imgurl: 'assets/images/image2.jpg',
+      name: 'Queen Thalia',
+      category: 'tulip',
+      price: 59.51,
       totalStock: 10
     }, {
       id : 4,
-      imgurl: 'assets/sunflower.jpg',
-      name: 'Sunny Smile',
-      category: 'sunflower',
-      price: 1499,
+      imgurl: 'assets/images/image1.jpg',
+      name: 'Pure Love',
+      category: 'whiterose',
+      price: 27.04,
       totalStock: 10
     }
   ];
@@ -91,8 +89,6 @@ export class FlowersPage {
   categories : any = [
     {
       category : 'daisy'
-    }, {
-      category : 'whiterose'
     }, {
       category : 'tulip'
     }, {
@@ -107,7 +103,7 @@ export class FlowersPage {
     
   }
 
-  searchFlowers ( term: string, sort: string = '' ) {
+  searchProducts ( term: string, sort: string = '' ) {
     this.utility.presentLoading('Please wait.!.');
 
     this.resetItems();
@@ -115,15 +111,15 @@ export class FlowersPage {
 
   }
 
-  getFlowersByDepartment(department: string, sort: string = '' ) {
-    console.log("search flower by department :", department);
+  getProductsByDepartment(department: string, sort: string = '' ) {
+    console.log("search product by department :", department);
     this.utility.presentLoading('Loading...');
     // list by and reset all items is in the childcategories page
     
 
   }
 
-  initFlowerList(items: any) {
+  initProductList(items: any) {
     this.items = items;
     this.filterItems = items;
     
@@ -144,9 +140,9 @@ export class FlowersPage {
       this.resetItems();
       this.listBy.nav = true;
 
-      this.getFlowersByDepartment(this.searchIn, `&column=${column}&order=${order}`);
+      this.getProductsByDepartment(this.searchIn, `&column=${column}&order=${order}`);
     } else if ( this.listBy.search ) {
-      this.searchFlowers(this.searchIn, `&column=${column}&order=${order}`);
+      this.searchProducts(this.searchIn, `&column=${column}&order=${order}`);
     }
 
     this.sort[type] = true;

@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { IonRouterOutlet, ModalController } from '@ionic/angular';
 import { AddToCartPage } from '../pages/add-to-cart/add-to-cart.page';
 import { CartPage } from '../services/cart/cart.page';
-import { FlowersPage } from '../services/flowers/flowers.page';
+import { ProductsPage } from '../services/products/products.page';
 
 @Component({
   selector: 'app-tab1',
@@ -24,17 +24,17 @@ export class Tab1Page {
   };
 
   bannerImages: any = [];
-  flowers: any = [];
+  products: any = [];
 
   constructor(
-    public flowerService : FlowersPage,
+    public productService : ProductsPage,
     public routerOutlet : IonRouterOutlet,
     public modalCtrl : ModalController,
     public cart : CartPage,
     private router: Router
   ) {
-    this.bannerImages = this.flowerService.bannerImages;
-    this.flowers = this.flowerService.flowers;
+    this.bannerImages = this.productService.bannerImages;
+    this.products = this.productService.products;
   }
 
   async addToCartModal(item) {

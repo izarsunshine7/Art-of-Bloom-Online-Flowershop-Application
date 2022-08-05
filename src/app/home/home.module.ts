@@ -2,9 +2,9 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
-import { ListingPage } from './listing.page';
+import { HomePage } from './home.page';
 
-import { ListingPageRoutingModule } from './listing-routing.module';
+import { HomePageRoutingModule } from './home-routing.module';
 
 
 @NgModule({
@@ -12,8 +12,8 @@ import { ListingPageRoutingModule } from './listing-routing.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    ListingPageRoutingModule
+    HomePageRoutingModule
   ],
-  declarations: [ListingPage]
+  declarations: [HomePage]
 })
-export class ListingPageModule {}
+export class HomePageModule {}
