@@ -56,7 +56,7 @@ export class FlowersPage {
     }
   ];
 
-  products = [
+  flowers = [
     {
       id : 1,
       imgurl: 'assets/daisy.jpg',
@@ -107,7 +107,7 @@ export class FlowersPage {
     
   }
 
-  searchProducts ( term: string, sort: string = '' ) {
+  searchFlowers ( term: string, sort: string = '' ) {
     this.utility.presentLoading('Please wait.!.');
 
     this.resetItems();
@@ -115,15 +115,15 @@ export class FlowersPage {
 
   }
 
-  getProductsByDepartment(department: string, sort: string = '' ) {
-    console.log("search product by department :", department);
+  getFlowersByDepartment(department: string, sort: string = '' ) {
+    console.log("search flower by department :", department);
     this.utility.presentLoading('Loading...');
     // list by and reset all items is in the childcategories page
     
 
   }
 
-  initProductList(items: any) {
+  initFlowerList(items: any) {
     this.items = items;
     this.filterItems = items;
     
@@ -144,9 +144,9 @@ export class FlowersPage {
       this.resetItems();
       this.listBy.nav = true;
 
-      this.getProductsByDepartment(this.searchIn, `&column=${column}&order=${order}`);
+      this.getFlowersByDepartment(this.searchIn, `&column=${column}&order=${order}`);
     } else if ( this.listBy.search ) {
-      this.searchProducts(this.searchIn, `&column=${column}&order=${order}`);
+      this.searchFlowers(this.searchIn, `&column=${column}&order=${order}`);
     }
 
     this.sort[type] = true;

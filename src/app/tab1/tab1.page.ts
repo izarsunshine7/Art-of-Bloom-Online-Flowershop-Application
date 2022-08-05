@@ -34,7 +34,7 @@ export class Tab1Page {
     private router: Router
   ) {
     this.bannerImages = this.flowerService.bannerImages;
-    this.flowers = this.flowerService.products;
+    this.flowers = this.flowerService.flowers;
   }
 
   async addToCartModal(item) {
@@ -45,7 +45,7 @@ export class Tab1Page {
       this.cart.placeItem(item);
       const modal = await this.modalCtrl.create({
         component: CartsPage,
-        cssClass: 'add-to-cart-modal',
+        cssClass: 'carts-modal',
         presentingElement: this.routerOutlet.nativeEl
       });
   

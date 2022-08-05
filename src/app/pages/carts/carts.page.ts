@@ -61,7 +61,7 @@ export class CartsPage implements OnInit {
     return qty;
   }
 
-  addToCart() {
+  Carts() {
     let itemQty = this.getCartItemQty();
 
     let validOrder = this.availableQty > 0 
