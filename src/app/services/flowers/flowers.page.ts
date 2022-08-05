@@ -5,7 +5,7 @@ import { UtilityPage } from '../utility/utility.page';
 @Injectable({
   providedIn: 'root'
 })
-export class ProductsPage {
+export class FlowersPage {
   
   brands: any = [];
   sizes: any = [];
@@ -63,28 +63,28 @@ export class ProductsPage {
       name: 'Beautiful You',
       category: 'daisy',
       price: 1299,
-    
+      totalStock: 10
     }, {
       id : 2,
       imgurl: 'assets/tulip.jpg',
       name: 'Queen Thalia',
       category: 'tulip',
       price: 3299,
-      
+      totalStock: 10
     }, {
       id : 3,
       imgurl: 'assets/whiterose.jpg',
       name: 'Pure Love',
       category: 'whiterose',
       price: 1599,
-      
+      totalStock: 10
     }, {
       id : 4,
       imgurl: 'assets/sunflower.jpg',
       name: 'Sunny Smile',
       category: 'sunflower',
       price: 1499,
-      
+      totalStock: 10
     }
   ];
 

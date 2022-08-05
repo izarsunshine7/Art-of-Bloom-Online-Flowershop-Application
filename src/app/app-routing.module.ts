@@ -7,20 +7,8 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    path: 'add-to-cart',
+    path: 'carts',
     loadChildren: () => import('./pages/carts/carts.module').then( m => m.CartsPageModule)
-  },
-  {
-    path: 'tab1',
-    loadChildren: () => import('./tab1/tab1.module').then( m => m.Tab1PageModule)
-  },
-  {
-    path: 'tab2',
-    loadChildren: () => import('./tab2/tab2.module').then( m => m.Tab2PageModule)
-  },
-  {
-    path: 'tabs',
-    loadChildren: () => import('./tabs/tabs.module').then( m => m.TabsPageModule)
   }
 ];
 @NgModule({

@@ -24,7 +24,7 @@ export class Tab1Page {
   };
 
   bannerImages: any = [];
-  products: any = [];
+  flowers: any = [];
 
   constructor(
     public flowerService : FlowersPage,
