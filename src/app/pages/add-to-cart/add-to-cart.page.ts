@@ -37,7 +37,7 @@ export class AddToCartPage implements OnInit {
     if (increasedQty <= this.availableQty) {
       this.cart.item['cartQuantity'] += 1;
     } else {
-      this.utility.showToast(`This Stock is not available!`, 'top', 'error');
+      this.utility.showToast(`Not available!`, 'top', 'error');
     }
   }
 
@@ -71,7 +71,7 @@ export class AddToCartPage implements OnInit {
       this.cart.addToCart();
       this.modalCtrl.dismiss();
     } else {
-      this.utility.showToast('This product is out of stock!', 'top', 'error');
+      this.utility.showToast('Out of Stock!', 'top', 'error');
     }
   }
 

@@ -60,28 +60,28 @@ export class ProductsPage {
       imgurl: 'assets/images/image1.jpg',
       name: 'Beautiful You',
       category: 'daisy',
-      price: 23.43,
+      price: 1299,
       totalStock: 10
     }, {
       id : 2,
       imgurl: 'assets/images/image3.jpg',
       name: 'Sunny Smile',
       category: 'sunflower',
-      price: 27.04,
+      price: 1599,
       totalStock: 10
     }, {
       id : 3,
       imgurl: 'assets/images/image2.jpg',
       name: 'Queen Thalia',
       category: 'tulip',
-      price: 59.51,
+      price: 2499,
       totalStock: 10
     }, {
       id : 4,
       imgurl: 'assets/images/image1.jpg',
       name: 'Pure Love',
       category: 'whiterose',
-      price: 27.04,
+      price: 1499,
       totalStock: 10
     }
   ];
