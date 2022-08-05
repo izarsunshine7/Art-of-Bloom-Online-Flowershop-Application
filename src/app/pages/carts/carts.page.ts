@@ -8,7 +8,7 @@ import { UtilityPage } from 'src/app/services/utility/utility.page';
   templateUrl: './carts.page.html',
   styleUrls: ['./carts.page.scss'],
 })
-export class CartPage implements OnInit {
+export class CartsPage implements OnInit {
 
   minOrderQty: any;
   availableQty: any;
