@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { IonRouterOutlet, ModalController } from '@ionic/angular';
-import { CartsPage } from '../pages/carts/carts.page';
+import { AddToCartPage } from '../pages/add-to-cart/add-to-cart.page';
 import { CartPage } from '../services/cart/cart.page';
 import { FlowersPage } from '../services/flowers/flowers.page';
 
@@ -44,8 +44,8 @@ export class Tab1Page {
     if ( !isAdded ) {
       this.cart.placeItem(item);
       const modal = await this.modalCtrl.create({
-        component: CartsPage,
-        cssClass: 'carts-modal',
+        component: AddToCartPage,
+        cssClass: 'add-to-cart-modal',
         presentingElement: this.routerOutlet.nativeEl
       });
   

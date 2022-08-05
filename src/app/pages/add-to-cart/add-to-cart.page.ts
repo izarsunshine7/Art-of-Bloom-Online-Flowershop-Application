@@ -4,11 +4,11 @@ import { CartPage } from 'src/app/services/cart/cart.page';
 import { UtilityPage } from 'src/app/services/utility/utility.page';
 
 @Component({
-  selector: 'app-carts',
-  templateUrl: './carts.page.html',
-  styleUrls: ['./carts.page.scss'],
+  selector: 'app-add-to-cart',
+  templateUrl: './add-to-cart.page.html',
+  styleUrls: ['./add-to-cart.page.scss'],
 })
-export class CartsPage implements OnInit {
+export class AddToCartPage implements OnInit {
 
   minOrderQty: any;
   availableQty: any;
@@ -61,7 +61,7 @@ export class CartsPage implements OnInit {
     return qty;
   }
 
-  Carts() {
+  addToCart() {
     let itemQty = this.getCartItemQty();
 
     let validOrder = this.availableQty > 0 

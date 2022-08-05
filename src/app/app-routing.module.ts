@@ -7,8 +7,8 @@ const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
   },
   {
-    path: 'carts',
-    loadChildren: () => import('./pages/carts/carts.module').then( m => m.CartsPageModule)
+    path: 'add-to-cart',
+    loadChildren: () => import('./pages/add-to-cart/add-to-cart.module').then( m => m.AddToCartPageModule)
   }
 ];
 @NgModule({
