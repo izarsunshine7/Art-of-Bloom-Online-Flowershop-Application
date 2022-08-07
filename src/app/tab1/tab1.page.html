@@ -23,13 +23,11 @@
 
   <ion-grid>
     <ion-row class="ion-justify-content-between ion-padding-vertical">
-      <ion-col size="4">
-        <div class="font-bold">
-          Flash Sale
-        </div>
+      <ion-col size="9">
+        <div class="font-bold">Available Flowers</div>
       </ion-col>
       <ion-col size="6" class="ion-text-right">
-        <ion-icon name="filter-outline"></ion-icon>
+      
       </ion-col>
     </ion-row>
     <ion-row>
@@ -42,7 +40,7 @@
           </ion-card-header>
           <ion-card-content>
             <div class="ion-color-dark">{{ product?.price | currency: 'PHP' }}</div>
-            <div><ion-button expand="full" color="danger" size="small" (click)="addToCartModal(product)">
+            <div><ion-button expand="full" color="medium" size="small" (click)="addToCartModal(product)">
               {{ cart.isAddedToCart(product?.id) ? 'Added' : 'Add to cart' }}
             </ion-button></div>
           </ion-card-content>

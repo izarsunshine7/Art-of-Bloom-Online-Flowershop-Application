@@ -40,7 +40,6 @@ export class CartPage {
   }
 
   increaseCartQty(index) {
-    //this.utility.presentLoading('Add quantity...');
     let increasedQty = this.items[index]['cartQuantity'] + 1;
 
     if ( increasedQty <= this.items[index]['totalStock'] ) {
@@ -49,14 +48,12 @@ export class CartPage {
       this.getCartTotalQty();
 
     } else {
-      //this.utility.dismissLoading();
       this.utility.showToast("More Stock is not available!", "top");
     }
     
   }
 
   decreaseCartQty(index) {
-    //this.utility.presentLoading('Decrease quantity...');
     let decreasedQty = this.items[index]['cartQuantity'] - 1;
 
     if ( decreasedQty >= 1 ) {
@@ -64,7 +61,6 @@ export class CartPage {
       this.getCartTotalQty();
 
     } else {
-      //this.utility.dismissLoading();
       this.utility.showToast("Quantity can't be less than Order Quantity", "top");
     }
     
@@ -74,7 +70,6 @@ export class CartPage {
     this.removeLocalCartItem(index);
   }
 
-  /* Handle cart locally with below methods */
   increaseLocalCartItem(index) {
     this.items[index]['cartQuantity'] += 1;
     this.total_price += this.items[index]['price'];

@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'add-to-cart',
     loadChildren: () => import('./pages/add-to-cart/add-to-cart.module').then( m => m.AddToCartPageModule)
+  },
+  {
+    path: 'tab3',
+    loadChildren: () => import('./tab3/tab3.module').then( m => m.Tab3PageModule)
   }
 ];
 @NgModule({

@@ -20,10 +20,8 @@ export class UtilityPage {
     this.isLoading = true;
 
     return await  this.loadingCtrl.create({
-       //cssClass: 'my-custom-class',
        message: content,
        spinner: "circles",
-       //duration: 2000
       }).then(loader => {
         loader.present().then(resp => {
           console.log('loading present :>> ');
@@ -46,7 +44,6 @@ export class UtilityPage {
       
    }
 
-   /* Show Toast*/  
   async showToast(msg: string, position, type = "success") {
     const toast = await this.toastCtrl.create({
       message: msg,

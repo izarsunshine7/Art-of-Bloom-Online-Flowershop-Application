@@ -65,7 +65,7 @@ export class ProductsPage {
     }, {
       id : 2,
       imgurl: 'assets/images/image3.jpg',
-      name: ' ',
+      name: 'Sunny Smile',
       category: 'sunflower',
       price: 1499,
       totalStock: 20

@@ -9,8 +9,8 @@
 <ion-content class="bg-light pink">
 
   <div *ngIf="cart.items.length < 1" class="noitem">
-    <img  src="assets/images/my-cart.png" />
-    <h1>Oops!</h1>
+    <img src="assets/empty-cart.png"><br>
+    <h2>Empty Cart!</h2>
   </div>
 
   <ion-list *ngIf="cart.items.length > 0" class="bg-light pink">
@@ -43,7 +43,7 @@
           <p class="mb-1">Total Quantity : {{ cart?.total_cart_qty }}</p>
           <p class="mt-1">Total Price    : {{ cart?.total_price | currency: 'PHP' }}</p>
         </div>
-        <ion-button mode="ios" color="danger" expand="full" (click)="placeOrder()"> Place Order </ion-button>
+        <ion-button mode="ios" color="medium" expand="full" (click)="placeOrder()"> Place Order </ion-button>
       </ion-col>
     </ion-row>
   </ion-toolbar>
