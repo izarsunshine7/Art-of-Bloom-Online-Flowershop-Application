@@ -61,28 +61,56 @@ export class ProductsPage {
       name: 'Beautiful You',
       category: 'daisy',
       price: 1299,
-      totalStock: 10
+      totalStock: 20
     }, {
       id : 2,
       imgurl: 'assets/images/image3.jpg',
-      name: 'Sunny Smile',
+      name: ' ',
       category: 'sunflower',
-      price: 1599,
-      totalStock: 10
+      price: 1499,
+      totalStock: 20
     }, {
       id : 3,
       imgurl: 'assets/images/image2.jpg',
       name: 'Queen Thalia',
       category: 'tulip',
-      price: 2499,
-      totalStock: 10
+      price: 2399,
+      totalStock: 20
     }, {
       id : 4,
-      imgurl: 'assets/images/image1.jpg',
+      imgurl: 'assets/images/image4.jpg',
       name: 'Pure Love',
       category: 'whiterose',
-      price: 1499,
-      totalStock: 10
+      price: 1699,
+      totalStock: 20
+    }, {
+      id : 5,
+      imgurl: 'assets/images/image5.jpg',
+      name: 'Fall For You',
+      category: 'rose',
+      price: 1599,
+      totalStock: 20
+    }, {
+      id : 6,
+      imgurl: 'assets/images/image6.jpg',
+      name: 'All My Love',
+      category: 'pinkrose',
+      price: 1899,
+      totalStock: 20
+    }, {
+      id : 7,
+      imgurl: 'assets/images/image7.jpg',
+      name: 'True of Love',
+      category: 'redrose',
+      price: 1999,
+      totalStock: 20
+    }, {
+      id : 8,
+      imgurl: 'assets/images/image8.jpg',
+      name: 'Sunny Morning',
+      category: 'sunflower',
+      price: 1999,
+      totalStock: 20
     }
   ];
 
@@ -93,6 +121,8 @@ export class ProductsPage {
       category : 'tulip'
     }, {
       category : 'sunflower'
+    }, {
+      category : 'whiterose'
     }
   ];
 
@@ -114,9 +144,7 @@ export class ProductsPage {
   getProductsByDepartment(department: string, sort: string = '' ) {
     console.log("search product by department :", department);
     this.utility.presentLoading('Loading...');
-    // list by and reset all items is in the childcategories page
     
-
   }
 
   initProductList(items: any) {
@@ -132,7 +160,6 @@ export class ProductsPage {
     this.uncheckSorts();
     
     console.log('type :>> ', type, this.sort);
-    //this.utility.presentLoading('Please wait.....');
 
     if ( this.listBy.banner ) {
       
